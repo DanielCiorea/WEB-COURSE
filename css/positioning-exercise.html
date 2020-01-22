@@ -1,0 +1,65 @@
+<html>
+
+<head>
+    <title>Positioning exercise</title>
+    <style>
+        body {
+            margin: 0;
+            background-color: #efefef;
+        }
+
+        .navigation {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 44px;
+            background-color: #4267b2;
+            z-index: 1;
+        }
+
+        .container {
+            width: 500px;
+            margin: 60px auto 0;
+        }
+
+        .card {
+            position: relative;
+            height: 300px;
+            border-radius: 3px;
+            margin-bottom: 15px;
+            background-color: #fff;
+        }
+
+        .close {
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+
+<div class="navigation"></div>
+<div class="container">
+    <div class="card"  id="box222">
+        <button class="close">X</button>
+    </div>
+    <div class="card">
+        <button class="close">X</button>
+    </div>
+    <div class="card">
+        <button class="close">X</button>
+    </div>
+    <div class="card">
+        <button class="close">X</button>
+    </div>
+    <div class="card">
+        <button class="close">X</button>
+    </div>
+</div>
+
+</body>
+</html>

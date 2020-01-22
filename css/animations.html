@@ -1,0 +1,79 @@
+<html>
+
+<head>
+    <title>Animations</title>
+
+    <style>
+        body {
+            margin: 0;
+        }
+
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: orangered;
+            /* animation: changeColor 3s linear 3s; */
+            animation: moveToRight 2s linear infinite;
+        }
+
+        /************** Can be any name instead of changeColor ************/
+        /* 
+            @keyframes changeColor {
+                from {
+                    background-color: orangered;
+                }
+                to {
+                    background-color: yellow;
+                }
+            } */
+
+
+
+        /*************************** Transform scale, position, etc
+
+            transform: translate
+            transform: rotate
+            transform: scale *****************************************/
+
+        /* @keyframes moveToRight {
+                from {
+                    margin-left: 0;
+                }
+                
+                to {
+                    margin-left: calc(100% - 200px);
+                }
+            }
+             */
+
+
+        @keyframes moveToRight {
+            0% {
+                transform: none;
+            }
+
+            25% {
+                transform: translate(calc(100vw - 200px), 0) rotate(45deg);
+
+            }
+
+            50% {
+                transform: translate(calc(100vw - 200px), calc(100vh - 200px)) rotate(90deg);
+            }
+
+            75% {
+                transform: translate(0, calc(100vh - 200px)) rotate(135deg);
+            }
+            
+            100% {
+                transform: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box"></div>
+</body>
+
+</html>

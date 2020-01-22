@@ -1,0 +1,79 @@
+<html>
+
+<head>
+    <title>Positions</title>
+
+    <style>
+        .static {
+            position: static;
+            border: 3px solid #73ad21;
+        }
+
+        .relative {
+            position: relative;
+            left: 30px;
+            border: 3px solid #73ad21;
+        }
+
+        div.fixed {
+            position: fixed;
+            top: 150;
+            right: 0;
+            width: 100%;
+            border: 3px solid #73ad21;
+            background-color: chocolate;
+        }
+
+        div.box {
+            height: 200px;
+            width: 2500px;
+            background-color: darkgreen;
+        }
+
+        .relative2 {
+            position: relative;
+            left: 50px;
+            top: 150px;
+            width: 400px;
+            height: 200px;
+            border: 3px solid #73ad21;
+            background-color: blueviolet;
+        }
+
+        .absolute {
+            position: absolute;
+            top: 80px;
+            right: 0;
+            width: 200px;
+            height: 100px;
+            border: 3px solid #73ad21;
+            background-color: cadetblue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="relative">
+        This element has position: relative;
+    </div>
+
+    <div class="static">
+        This element has position: static;
+    </div>
+
+    <div class="fixed">
+        This element has position: fixed;
+    </div>
+
+    <div class="box"> Parent box </div>
+
+    <div class="relative2">
+        This element has position: relative;
+
+        <div class="absolute">
+            This element has position: absolute;
+        </div>
+    </div>
+</body>
+
+</html>
