@@ -1,0 +1,75 @@
+<html>
+  <head>
+    <title>Html CSS exercises</title>
+    <link rel="stylesheet" href="index.css" type="text/css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lacquer&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container" id="container">
+      <img class="logo" src="logo.png" alt="Logo" />
+      <h1 class="title">Tu Du leest</h1>
+      <input
+        type="text"
+        class="input"
+        placeholder="Add a new TODO"
+        id="input"
+      />
+
+      <label class="todo">
+        <input type="checkbox" class="nativeCheckbox" />
+        <span class="checkbox"></span>
+        Make a todo list
+      </label>
+
+      <label class="todo">
+        <input type="checkbox" class="nativeCheckbox" />
+        <span class="checkbox"></span>
+        Go for a bike ride
+      </label>
+
+      <label class="todo">
+        <input type="checkbox" class="nativeCheckbox" />
+        <span class="checkbox"></span>
+        (pretend to) Read a book
+      </label>
+
+      <label class="todo">
+        <input type="checkbox" class="nativeCheckbox" />
+        <span class="checkbox"></span>
+        Sip tea whilst drinking around a fire in the rain
+      </label>
+    </div>
+
+    <script>
+      var input = document.getElementById("input");
+      var container = document.getElementById("container");
+
+      function createTodo(todoText) {
+        var labelElement = document.createElement("label");
+        labelElement.setAttribute("class", "todo");
+        labelElement.innerHTML = todoText;
+
+        var checkbox = document.createElement("span");
+        checkbox.setAttribute("class", "checkbox");
+        labelElement.prepend(checkbox);
+
+        var nativeCheckbox = document.createElement("input");
+        nativeCheckbox.setAttribute("class", "nativeCheckbox");
+        nativeCheckbox.setAttribute("type", "checkbox");
+        labelElement.prepend(nativeCheckbox);
+        container.appendChild(labelElement);
+      }
+
+      input.addEventListener("keypress", function(event) {
+        if (event.key === "Enter") {
+          var todoText = input.value;
+          createTodo(todoText);
+          input.value = "";
+        }
+      });
+    </script>
+  </body>
+</html>

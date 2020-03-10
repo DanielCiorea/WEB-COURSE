@@ -19,7 +19,13 @@
         model: "BMW",
         numberOfWheels: 4,
         consumption: 0.9,
-        isEngineStarted: false
+        isEngineStarted: false,
+        startEngine: function() {
+          this.isEngineStarted = true;
+        },
+        stopEngine: function() {
+          this.isEngineStarted = false;
+        }
       };
 
       console.log(car);
