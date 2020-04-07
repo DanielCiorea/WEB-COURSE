@@ -1,0 +1,20 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  margin: 10px;
+}
+
+button {
+  height: 20px;
+  background-color: green;
+}
+button:hover {
+  height: 20px;
+  background-color: rgb(136, 136, 136);
+}
+
+h1 {
+  color: indigo;
+  font-size: 50px;
+}
