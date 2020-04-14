@@ -1,10 +1,22 @@
 <html>
   <head>
     <title>Clock</title>
+    <style>
+      div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        width: 100vw;
+        background-color: olivedrab;
+      }
+    </style>
   </head>
 
   <body>
-    <h1 id="clock">00:00:00</h1>
+    <div>
+      <h1 id="clock">00:00:00</h1>
+    </div>
 
     <script>
       const clockText = document.getElementById("clock");
