@@ -1,3 +1,23 @@
+body {
+  font-family: "Ubuntu Mono", monospace;
+}
+
+.clock {
+  background-color: #f2f2f2;
+  padding: 20px;
+  margin: 10px;
+}
+
+.city {
+  font-size: 16px;
+}
+
+.time {
+  display: block;
+  font-size: 24px;
+  font-weight: bold;
+}
+
 .container {
   display: flex;
   align-items: center;
